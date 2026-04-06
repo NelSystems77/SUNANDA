@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Imágenes - SUNANDA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #000;
+            color: #fff;
+        }
+        h1 {
+            color: #d4af37;
+        }
+        .test-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .success {
+            color: #4ade80;
+            font-weight: bold;
+        }
+        .error {
+            color: #f87171;
+            font-weight: bold;
+        }
+        .info {
+            background: #333;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test de Imágenes - SUNANDA Premium</h1>
+    
+    <div class="info">
+        <p><strong>Instrucciones:</strong></p>
+        <ol>
+            <li>Abre este archivo HTML en tu navegador</li>
+            <li>Verifica que las 3 imágenes se vean correctamente</li>
+            <li>Si ves "✅ IMAGEN CARGADA" = Todo está bien</li>
+            <li>Si ves "❌ ERROR" = Revisa la estructura de carpetas</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>1. Logo SUNANDA</h2>
+        <p>Ruta: <code>./logo.png</code></p>
+        <img src="./logo.png" 
+             alt="Logo SUNANDA" 
+             onload="this.nextElementSibling.innerHTML='✅ IMAGEN CARGADA'" 
+             onerror="this.nextElementSibling.innerHTML='❌ ERROR: Imagen no encontrada'">
+        <p class="status">⏳ Cargando...</p>
+    </div>
+
+    <div class="test-section">
+        <h2>2. Imagen Promocional - Timexpert Lift_IN</h2>
+        <p>Ruta: <code>./assets/images/timexpert-liftin-promo.jpg</code></p>
+        <img src="./assets/images/timexpert-liftin-promo.jpg" 
+             alt="Timexpert Lift_IN Promo" 
+             onload="this.nextElementSibling.innerHTML='✅ IMAGEN CARGADA'" 
+             onerror="this.nextElementSibling.innerHTML='❌ ERROR: Imagen no encontrada'">
+        <p class="status">⏳ Cargando...</p>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Producto - Crema Germaine de Capuccini</h2>
+        <p>Ruta: <code>./assets/images/producto-germaine.jpg</code></p>
+        <img src="./assets/images/producto-germaine.jpg" 
+             alt="Producto Germaine" 
+             onload="this.nextElementSibling.innerHTML='✅ IMAGEN CARGADA'" 
+             onerror="this.nextElementSibling.innerHTML='❌ ERROR: Imagen no encontrada'">
+        <p class="status">⏳ Cargando...</p>
+    </div>
+
+    <div class="test-section">
+        <h2>4. Video Promocional</h2>
+        <p>Ruta: <code>./assets/video/promocional.mp4</code></p>
+        <video controls width="100%" style="max-width: 800px;">
+            <source src="./assets/video/promocional.mp4" type="video/mp4">
+            ❌ ERROR: Video no encontrado
+        </video>
+    </div>
+
+    <div class="info" style="background: #1a4d1a; margin-top: 3rem;">
+        <h3 style="color: #4ade80;">✅ Si todas las imágenes cargan correctamente:</h3>
+        <p>Tu proyecto está listo para deploy. Puedes subir la carpeta completa a Vercel.</p>
+    </div>
+
+    <div class="info" style="background: #4d1a1a; margin-top: 1rem;">
+        <h3 style="color: #f87171;">❌ Si alguna imagen NO carga:</h3>
+        <p><strong>Verifica que la estructura de carpetas sea:</strong></p>
+        <pre style="background: #000; padding: 1rem; border-radius: 4px; overflow-x: auto;">
+sunanda-premium-landing/
+├── index.html
+├── styles.css
+├── app.js
+├── logo.png
+├── assets/
+│   ├── images/
+│   │   ├── producto-germaine.jpg
+│   │   └── timexpert-liftin-promo.jpg
+│   └── video/
+│       └── promocional.mp4
+├── README-PREMIUM.md
+└── DEPLOY-RAPIDO.md</pre>
+    </div>
+
+</body>
+</html>
