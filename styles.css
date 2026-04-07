@@ -933,9 +933,9 @@ body {
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.75) 50%,
+    rgba(0, 0, 0, 0.85) 100%
   );
   z-index: 1;
 }
@@ -948,7 +948,7 @@ body {
 /* ===== Signature Treatment Section ===== */
 .signature-treatment {
   padding: 8rem 0;
-  background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 100%);
+  background: linear-gradient(180deg, var(--dark-900) 0%, var(--dark-800) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1109,6 +1109,8 @@ body {
   height: auto;
   display: block;
   transition: transform 0.6s ease;
+  position: relative;
+  z-index: 10;
 }
 
 .signature-image-wrapper:hover .signature-img {
@@ -1121,10 +1123,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.6s ease;
   pointer-events: none;
+  z-index: 5;
 }
 
 .signature-image-wrapper:hover .signature-glow {
@@ -1159,7 +1162,7 @@ body {
 /* ===== Product Spotlight Section ===== */
 .product-spotlight {
   padding: 8rem 0;
-  background: #1a1a1a;
+  background: var(--dark-900);
   position: relative;
   overflow: hidden;
 }
@@ -1278,7 +1281,7 @@ body {
   border-radius: 1rem;
   transition: transform 0.6s ease;
   position: relative;
-  z-index: 2;
+  z-index: 10;
   filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
 }
 
@@ -1293,10 +1296,10 @@ body {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
   filter: blur(60px);
   animation: pulseGlow 4s ease-in-out infinite;
-  z-index: 1;
+  z-index: 5;
 }
 
 @keyframes pulseGlow {
