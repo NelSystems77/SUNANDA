@@ -1310,6 +1310,7 @@ body {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
+  align-items: stretch; /* ← agrega esto */
 }
 
 @media (min-width: 768px) {
@@ -1330,6 +1331,8 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.3s ease;
+  display: flex;          /* ← agrega esto */
+  flex-direction: column; /* ← agrega esto */
 }
 
 .service-card:hover {
@@ -1372,6 +1375,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: auto; /* ← agrega esto: ancla la lista al fondo */
 }
 
 .service-features li {
@@ -1388,6 +1392,7 @@ body {
   color: var(--gold-500);
   font-weight: 700;
 }
+
 
 /* ===== Product Spotlight Section ===== */
 .product-spotlight {
